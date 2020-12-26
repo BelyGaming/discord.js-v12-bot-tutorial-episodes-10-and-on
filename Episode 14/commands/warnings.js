@@ -3,8 +3,7 @@ const db = require('quick.db');
 module.exports = {
     name: "warnings",
     description: "Check a users warnings",
-
-    async run (client, message, args){
+execute(message, args){
         const user = message.mentions.users.first() || message.guild.members.cache.get(args[0]) || message.author;
 
 
